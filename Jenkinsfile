@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Running Docker container...'
                 bat 'docker rm -f my-website-container || exit 0'
-                bat 'docker run -d -p 8080:80 --name my-website-container %DOCKER_IMAGE%'
+                bat 'docker run -d -p 8090:80 --name my-website-container %DOCKER_IMAGE%'
             }
         }
         stage('Test Website') {
